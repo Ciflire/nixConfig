@@ -2,7 +2,11 @@
 
 {
   imports = [
-    ./fonts.nix
     ./themes.nix
   ];
+
+  home = {
+    stateVersion = "23.05";
+  };
+
 }
