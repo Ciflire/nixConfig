@@ -4,7 +4,7 @@
   imports = [
     ./envVars.nix
     ./hardware-configuration.nix
-    ./localeVars.nix
+    ./localVars.nix
     ./network.nix
     ./nvidia.nix
     ./pipewire.nix
