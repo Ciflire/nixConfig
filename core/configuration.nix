@@ -9,6 +9,7 @@
     ./nvidia.nix
     ./pipewire.nix
     ./systemd.nix
+    ./users.nix
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -20,5 +21,6 @@
     git
     neofetch
     man
+    btop
   ];
 }
