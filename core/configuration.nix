@@ -4,9 +4,10 @@
   imports = [
     ./envVars.nix
     ./hardware-configuration.nix
-    ./locale.nix
+    ./localeVars.nix
     ./network.nix
     ./nvidia.nix
+    ./pipewire.nix
     ./systemd.nix
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
