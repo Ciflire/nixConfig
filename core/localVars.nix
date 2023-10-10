@@ -5,6 +5,8 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "fr_FR.UTF-8";
 
+  console.keyMap = "fr";
+
   # i18n.extraLocaleSettings = {
   #   LC_ADDRESS = "fr_FR.UTF-8";
   #   LC_IDENTIFICATION = "fr_FR.UTF-8";

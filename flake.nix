@@ -19,7 +19,9 @@
           inherit system;
           modules = [
             ./core/configuration.nix
+            ./development/main.nix
             ./hyprland/hypr.nix
+
             home-manager.nixosModules.home-manager
             {
               home-manager = {

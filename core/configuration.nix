@@ -3,6 +3,7 @@
 {
   imports = [
     ./envVars.nix
+    ./fonts.nix
     ./hardware-configuration.nix
     ./localVars.nix
     ./network.nix
@@ -22,5 +23,13 @@
     neofetch
     man
     btop
+    
+
+    #TODO: move to user only systemPackages
+    discord-canary
+
+    #TODO: move those packages into nvim dependencies
+    lazygit
+
   ];
 }
