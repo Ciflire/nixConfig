@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./bluetooth.nix
     ./envVars.nix
     ./fonts.nix
     ./hardware-configuration.nix
@@ -24,6 +25,7 @@
     man
     btop
     
+    bluetuith
 
     #TODO: move to user only systemPackages
     discord-canary
