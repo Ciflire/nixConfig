@@ -21,6 +21,7 @@
     sway
     swaylock-effects # Screenlock
     swww # wallpaper
+    thunderbird
 
     xdg-desktop-portal-hyprland
     xdg-utils
