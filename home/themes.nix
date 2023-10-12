@@ -4,11 +4,15 @@
     enable = true;
     iconTheme = {
       name = "Adwaita";
-      package = pkgs.gnome3.adwaita-icon-theme;
+      package = pkgs.gnome.adwaita-icon-theme;
+    };
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
     };
     theme = {
-      name = "Shades-of-gray";
-      package = pkgs.shades-of-gray-theme;
+      name = "Juno";
+      package = pkgs.juno-theme;
     };
   };
   qt = {
