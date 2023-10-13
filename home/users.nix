@@ -1,12 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home = {
     username = "ciflire";
-    homeDirectory = "/home/ciflire";
+    homeDirectory = lib.mkDefault "/home/ciflire";
   };
 
   programs.zsh = {
     enable = true;
-  }
+  };
 }

@@ -4,6 +4,7 @@
   imports = [
     ./themes.nix
     ./terminal.nix
+#    ./users.nix
   ];
 
   home = {
