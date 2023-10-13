@@ -6,5 +6,10 @@
     nodePackages_latest.bash-language-server
 
     rnix-lsp
+
+    
+    python311Packages.python-lsp-server
+
+
   ];
 }
