@@ -1,8 +1,14 @@
 { config, pkgs, ... }:
 {
   # TODO: do it with home manager
-  programs.zsh.enable = true;
-
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+#      vpn = "sudo openconnect -u vesse1u@etu --authgroup='Universite-de-Lorraine' vpn.univ-lorraine.fr";
+      rnm = "sudo systemctl restart NetworkManager";
+      rebuild = "sudo nixos-rebuild switch --flake /home/ciflire/secondFlake#g713-nixos";
+    };
+  };
   users.users.ciflire = {
     shell = pkgs.zsh;
     isNormalUser = true;
