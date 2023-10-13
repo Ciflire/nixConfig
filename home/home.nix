@@ -3,6 +3,7 @@
 {
   imports = [
     ./themes.nix
+    ./terminal.nix
   ];
 
   home = {
