@@ -10,6 +10,7 @@
     ./network.nix
     ./nvidia.nix
     ./pipewire.nix
+    ./pm.nix
     ./systemd.nix
     ./users.nix
   ];
@@ -19,12 +20,16 @@
 
   environment.systemPackages = with pkgs; [
     neovim
+    
+    helix
+    tree-sitter
+    
     wget
     git
     neofetch
     man
     btop
-    
+
     bluetuith
 
     #TODO: move to user only systemPackages
