@@ -33,7 +33,7 @@
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
-                users.ciflire = ./home/home.nix;
+                users.ciflire = ./home/home_ciflire.nix;
               };
             }
           ];
