@@ -12,7 +12,7 @@
     ./pipewire.nix
     ./pm.nix
     ./systemd.nix
-    ./users.nix
+#    ./users.nix
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
