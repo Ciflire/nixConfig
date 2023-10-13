@@ -10,9 +10,10 @@
     ./network.nix
     ./nvidia.nix
     ./pipewire.nix
+    ./pgsl.nix
     ./pm.nix
     ./systemd.nix
-#    ./users.nix
+    ./users.nix
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -38,5 +39,6 @@
     #TODO: move those packages into nvim dependencies
     lazygit
 
+    cmatrix
   ];
 }
