@@ -19,10 +19,28 @@
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "23.11";
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-run"
+  ];
+
+  environment.systemPackages = with pkgs; [
+    (steam.override {
+      withPrimus = true;
+      extraPkgs = pkgs: [ bumblebee glxinfo ];
+    }).run
+  ];
+
   environment.systemPackages = with pkgs; [
     neovim
     ripgrep
-    steam
 
     helix
     tree-sitter
