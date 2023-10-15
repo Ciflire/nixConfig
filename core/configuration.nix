@@ -10,8 +10,7 @@
     ./network.nix
     ./nvidia.nix
     ./pipewire.nix
-    ./pgsql_packages.nix
-    ./pgsql_setup.nix
+    ./pgsql.nix
     ./pm.nix
     ./systemd.nix
     ./users.nix
