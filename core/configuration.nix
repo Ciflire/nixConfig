@@ -22,10 +22,12 @@
 
   environment.systemPackages = with pkgs; [
     neovim
-    
+    ripgrep
+    steam
+
     helix
     tree-sitter
-    
+
     wget
     git
     neofetch
@@ -41,5 +43,7 @@
     lazygit
 
     cmatrix
+
+    pgadmin
   ];
 }
