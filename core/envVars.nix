@@ -2,8 +2,8 @@
 {
   environment.variables = {
     EDITOR = "nvim";
-    NIXOS_OZONE_WL = "true";
     XDG_DATA_HOME = "$HOME/.local/share";
+    NIXOS_OZONE_WL = "1";
   };
 }
 
