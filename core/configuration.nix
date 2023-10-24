@@ -1,9 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs,inputs, ... }:
 
 {
   imports = [
     ./bluetooth.nix
-    ./editor.nix
     ./envVars.nix
     ./fonts.nix
     ./hardware-configuration.nix
@@ -38,6 +37,8 @@
     openconnect
     neovim
     ripgrep
+    
+    helix inputs.helix.packages.${pkgs.system}.default
 
     tree-sitter
 

@@ -220,11 +220,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1698149730,
-        "narHash": "sha256-FvkEC2ToWQ84nk+tLGRO/1sdwniPmK9OyC7XNOy/3uw=",
+        "lastModified": 1698153033,
+        "narHash": "sha256-kZz71P0rQn9m8zG2AUaFS0D56tCYZOnVq1u0TJOw/Gk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "41a098a3bc3e19c3db22ef01ba186d224d1574c3",
+        "rev": "0a1eec7713a8df26efc2efc8cf5420f45bb44a32",
         "type": "github"
       },
       "original": {
@@ -264,20 +264,6 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1697915759,
-        "narHash": "sha256-WyMj5jGcecD+KC8gEs+wFth1J1wjisZf8kVZH13f1Zo=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "51d906d2341c9e866e48c2efcaac0f2d70bfd43e",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
       }
     },
     "nixvim": {
@@ -359,7 +345,6 @@
       "inputs": {
         "helix": "helix",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim"
