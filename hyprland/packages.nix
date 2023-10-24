@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   # TODO: extra packages of hyprland
   environment.systemPackages = with pkgs; [
@@ -10,7 +10,7 @@
     clapper
     dunst # notification system
     eww-wayland # status bar
-    firefox-wayland
+    # firefox-bin
     gitkraken
     grim
     webcord

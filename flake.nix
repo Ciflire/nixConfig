@@ -18,10 +18,10 @@
 
     inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
-  outputs = { nixpkgs-master, nixpkgs-unstable, home-manager, ... }@inputs:
+  outputs = { nixpkgs-master, nixpkgs-unstable ,home-manager, ... }@inputs:
     {
       nixosConfigurations = {
-        g713-nixos = nixpkgs-master.lib.nixosSystem {
+        g713-nixos = nixpkgs-unstable.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {inherit inputs;};
           modules = [
