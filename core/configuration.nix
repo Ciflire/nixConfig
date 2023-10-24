@@ -14,7 +14,7 @@
     ./pm.nix
     ./systemd.nix
     ./users.nix
-    ./wine.nix 
+    ./wine.nix
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -34,6 +34,7 @@
 
 
   environment.systemPackages = with pkgs; [
+    openconnect
     neovim
     ripgrep
 
@@ -52,13 +53,13 @@
     bluetuith
 
     #TODO: move to user only systemPackages
-    discord-canary
+    discord-ptb
 
     #TODO: move those packages into nvim dependencies
     lazygit
 
     cmatrix
 
-    pgadmin
+    zellij
   ];
 }
