@@ -4,7 +4,7 @@
   imports = [
     ./bluetooth.nix
     ./envVars.nix
-    ./fonts.nix
+#    ./fonts.nix
     ./hardware-configuration.nix
     ./localVars.nix
     ./network.nix
@@ -38,7 +38,7 @@
     neovim
     ripgrep
     
-    helix inputs.helix.packages.${pkgs.system}.default
+    inputs.helix.packages.${pkgs.system}.default
 
     tree-sitter
 
