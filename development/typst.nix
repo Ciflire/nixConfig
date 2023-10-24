@@ -1,9 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    typst
     typst-lsp
-    nodePackages_latest.bash-language-server
-    rnix-lsp
-    gopls
+    typstfmt
   ];
 }

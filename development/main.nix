@@ -2,10 +2,13 @@
 
 {
   imports = [
-    ./compilers.nix
-    ./debuggers.nix
-    ./formatter.nix
-    ./linters.nix
-    ./lsp.nix
+    ./c.nix
+    ./cpp.nix
+    ./java.nix
+    ./go.nix
+    ./java.nix
+    ./python.nix
+    ./rust.nix
+    ./typst.nix
   ];
 }
