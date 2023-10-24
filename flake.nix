@@ -2,18 +2,21 @@
   description = "My second flake ";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/master";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = github:nix-community/home-manager;
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-master";
     };
+    helix.url = "github:helix-editor/helix";
   };
+  # inputs.firefox-hyprland.inputs.nixpkgs.follows = "nixpkgs-unstable";
   inputs.nixvim = {
     url = "github:nix-community/nixvim";
     # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
     # url = "github:nix-community/nixvim/nixos-23.05";
 
-    inputs.nixpkgs.follows = "nixpkgs";
+    inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
   outputs = { nixpkgs, home-manager, ... }:
     let
