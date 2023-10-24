@@ -3,6 +3,7 @@
 {
   imports = [
     ./bluetooth.nix
+    ./editor.nix
     ./envVars.nix
     ./fonts.nix
     ./hardware-configuration.nix
@@ -38,7 +39,6 @@
     neovim
     ripgrep
 
-    helix
     tree-sitter
 
     unzip
