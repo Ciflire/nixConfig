@@ -10,7 +10,7 @@
     clapper
     dunst # notification system
     eww-wayland # status bar
-    # firefox-bin
+    firefox-bin
     gitkraken
     grim
     webcord
