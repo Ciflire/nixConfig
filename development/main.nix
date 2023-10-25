@@ -10,6 +10,7 @@
     ./nix.nix
     ./python.nix
     ./rust.nix
+    ./svelte.nix
     ./typst.nix
   ];
 }
