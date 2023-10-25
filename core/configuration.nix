@@ -4,7 +4,7 @@
   imports = [
     ./bluetooth.nix
     ./envVars.nix
-#    ./fonts.nix
+    ./fonts.nix
     ./hardware-configuration.nix
     ./localVars.nix
     ./network.nix
