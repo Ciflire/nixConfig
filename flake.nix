@@ -5,7 +5,7 @@
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = github:nix-community/home-manager;
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs-master";
     };
     helix.url = "github:helix-editor/helix";
