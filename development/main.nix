@@ -13,6 +13,7 @@
     ./python.nix
     ./rust.nix
     ./svelte.nix
+    ./typescript.nix
     ./typst.nix
   ];
 }
