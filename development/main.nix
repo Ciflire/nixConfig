@@ -13,6 +13,7 @@
     ./nix.nix
     ./python.nix
     ./rust.nix
+    ./sql.nix
     ./svelte.nix
     ./typescript.nix
     ./typst.nix
