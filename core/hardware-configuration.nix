@@ -15,6 +15,9 @@
   boot.extraModulePackages = [ ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  hardware.xpadneo.enable = true;
+
+
   fileSystems."/" =
     {
       device = "/dev/disk/by-uuid/637a523d-d122-41cb-a9e0-d9a3ed706562";
@@ -41,5 +44,6 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-}
+  # xbox controller drivers
+  }
 
