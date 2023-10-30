@@ -51,6 +51,7 @@
     wl-clipboard # clipboard
     wlogout # logout manager
     wofi # app launchers
+    yuzu
     zathura # PDF viewer
   ];
 
