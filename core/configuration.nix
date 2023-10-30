@@ -61,6 +61,8 @@
 
     cmatrix
 
+    rar
+    
     zellij
   ];
 }
