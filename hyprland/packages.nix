@@ -30,6 +30,7 @@
     wlr-randr
     playerctl
     polkit # authentication agent
+    ryujinx
     slurp
     spotify
     steam
