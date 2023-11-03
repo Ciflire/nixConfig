@@ -5,6 +5,7 @@
     ./c.nix
     ./cpp.nix
     ./docker.nix
+    ./html.nix
     ./java.nix
     ./go.nix
     ./java.nix
