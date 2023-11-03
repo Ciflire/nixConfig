@@ -54,7 +54,7 @@
     bluetuith
 
     #TODO: move to user only systemPackages
-    discord-ptb
+    discord-canary
 
     #TODO: move those packages into nvim dependencies
     lazygit
