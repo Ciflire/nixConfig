@@ -25,7 +25,8 @@
     nwg-drawer
     nwg-wrapper
     nwg-launchers
-    nwg-look  
+    nwg-look
+#    nwg-shell
     obs-studio
     wlr-randr
     playerctl

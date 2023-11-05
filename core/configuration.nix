@@ -41,10 +41,11 @@
     inputs.helix.packages.${pkgs.system}.default
 
     tree-sitter
-
+    lshw
     unzip
     zip
-
+    light
+    
     wget
     git
     neofetch
@@ -54,7 +55,7 @@
     bluetuith
 
     #TODO: move to user only systemPackages
-    discord-canary
+    discord
 
     #TODO: move those packages into nvim dependencies
     lazygit
