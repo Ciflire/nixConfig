@@ -5,7 +5,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "ciflire";
-    extraGroups = [ "networkmanager" "wheel" "postgres" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "postgres" "docker" "wireshark"];
   };
 
   programs.zsh = {
