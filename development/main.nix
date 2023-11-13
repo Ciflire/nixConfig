@@ -10,6 +10,7 @@
     ./go.nix
     ./java.nix
     ./javascript.nix
+    ./lua.nix
     ./markdown.nix
     ./nix.nix
     ./python.nix
