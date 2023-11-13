@@ -11,6 +11,7 @@
     dunst # notification system
     eww-wayland # status bar
     firefox-bin
+    fractal
     gitkraken
     grim
     webcord
@@ -34,22 +35,25 @@
     ryujinx
     slurp
     spotify
-    steam
-    steam-run
+    # steam
+    # steam-run
     swappy
     sway
     swaylock-effects # Screenlock
     swww # wallpaper
     thunderbird
+    revolt-desktop
 
     xdg-desktop-portal-hyprland
     xdg-utils
     xorg.xeyes
     xfce.thunar
     xournalpp
+    vscode
     waybar # status bar
     wireplumber # sound
     wdisplays
+    wireshark
     wl-clipboard # clipboard
     wlogout # logout manager
     wofi # app launchers
