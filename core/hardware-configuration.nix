@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" ];
@@ -16,12 +17,14 @@
   boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/2f179a0f-eaa1-455e-95ec-d12f580237aa";
+    {
+      device = "/dev/disk/by-uuid/2f179a0f-eaa1-455e-95ec-d12f580237aa";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/55DB-5CFF";
+    {
+      device = "/dev/disk/by-uuid/55DB-5CFF";
       fsType = "vfat";
     };
 
