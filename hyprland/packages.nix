@@ -27,11 +27,13 @@
     nwg-wrapper
     nwg-launchers
     nwg-look
-#    nwg-shell
+    #    nwg-shell
     obs-studio
+    openrgb
     wlr-randr
     playerctl
-    polkit # authentication agent
+    polkit
+    libsForQt5.polkit-kde-agent # authentication agent
     ryujinx
     slurp
     spotify
@@ -43,7 +45,7 @@
     swww # wallpaper
     thunderbird
     revolt-desktop
-
+    android-tools
     xdg-desktop-portal-hyprland
     xdg-utils
     xorg.xeyes
