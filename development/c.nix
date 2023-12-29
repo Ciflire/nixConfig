@@ -4,6 +4,7 @@
     rocmPackages.llvm.clang
     clang-tools
     lldb
+    gccgo
   ];
 }
 

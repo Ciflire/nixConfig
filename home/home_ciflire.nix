@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./themes.nix
     ./users.nix
   ];
 

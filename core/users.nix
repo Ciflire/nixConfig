@@ -16,7 +16,14 @@
     shellAliases = {
       vpn = "sudo openconnect -u vesse1u@etu --authgroup='Universite-de-Lorraine' vpn.univ-lorraine.fr";
       rnm = "sudo systemctl restart NetworkManager";
-      rebuild = "sudo nixos-rebuild switch --flake /home/ciflire/nixConfig#g713-nixos";
+      upgrade = "sudo nixos-rebuild switch --flake /home/ciflire/nixConfig#g713-nixos";
+      update = "sudo nix flake update /home/ciflire/nixConfig";
+      wallpaper = "/home/ciflire/dotfiles/hypr/scripts/wallpaper.sh select";
+      ls = "eza";
+      la = "eza -la";
+      lr = "eza -lR";
+      cat = "bat";
+      open = "xdg-open";
     };
   };
 

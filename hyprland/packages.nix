@@ -2,6 +2,22 @@
 {
   # TODO: extra packages of hyprland
   environment.systemPackages = with pkgs; [
+    dolphin
+    yarn
+    transmission-qt
+    gum
+    rsync
+    swayidle
+    pywal
+    killall
+    cliphist
+    swayimg
+    eza
+    bat
+    bind
+    traceroute
+    pandoc
+    p7zip
     alacritty
     kitty
     arandr
@@ -58,7 +74,7 @@
     wireshark
     wl-clipboard # clipboard
     wlogout # logout manager
-    wofi # app launchers
+    rofi # app launchers
     yuzu
     zathura # PDF viewer
   ];
