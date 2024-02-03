@@ -38,4 +38,5 @@
     lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.flipperzero.enable = true;
   hardware.xpadneo.enable = true;
+  hardware.openrazer.enable = true;
 }

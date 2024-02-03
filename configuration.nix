@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, fetchurl, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
@@ -17,9 +17,11 @@
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
   virtualisation.docker.enable = true;
+  services.udev.packages = [ pkgs.logitech-udev-rules ];
 
   environment.sessionVariables = { EDITOR = "hx"; };
   networking.hostName = "nixos"; # Define your hostname.
+  fonts.fontDir.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -53,10 +55,8 @@
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  programs.sway.enable = true;
+
   # Configure keymap in X11
   services.xserver = {
     layout = "fr";
@@ -81,7 +81,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -97,7 +97,12 @@
     pinentryFlavor = "curses";
     enableSSHSupport = true;
   };
-
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    # gtk portal needed to make gtk apps happy
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   fonts.packages = with pkgs; [ fira-code-nerdfont ];
@@ -106,7 +111,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "VESSE Léo";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "openrazer" "vboxusers" ];
     packages = with pkgs; [
       firefox
       kate
@@ -114,8 +119,6 @@
       discord-canary
       helix
       gitkraken
-      gcc
-      clang
       vscode
       # gnupg
       spotify
@@ -128,52 +131,59 @@
         mingwSupport = true;
       })
       winetricks
-      nodePackages_latest.pyright
-      black
-      python3
-      eza
+      lsd
       openconnect
       zellij
       lazygit
-      vscode-langservers-extracted
-      nodejs_21
-      sqlite
       marksman
       dprint
       bat
       sqlitebrowser
-      obs-studio
+      (pkgs.wrapOBS {
+        plugins =
+          (with pkgs.obs-studio-plugins; [ obs-pipewire-audio-capture ]);
+      })
       chromium
       wl-clipboard
-      typst
-      typst-lsp
-      typstfmt
       zathura
-      xdg-desktop-portal-wlr
       wlroots
       openssl
       mongodb-compass
       glib
       glibc
-      libGL
-      gtk4
-      gtk3
-      gtk2
-      gsettings-qt
-      gsettings-desktop-schemas
-      ruff
-      ruff-lsp
       mdbook
-      go-task
-      go
-      gopls
-      gofumpt
-      nodejs_21
-      openapi-generator-cli
       qFlipper
-      nixd
-      nixfmt
       asusctl
+      ntfs3g
+      direnv
+      pre-commit
+      rustup
+      libreoffice-qt
+      pdf2svg
+      unzip
+      solaar
+      wezterm
+      gcc
+      zip
+      lua
+      lua-language-server
+      luaformatter
+      vlc
+      xorg.xeyes
+      xwaylandvideobridge
+      (lutris.override { extraLibraries = pkgs: [ pkgs.jansson ]; })
+      protontricks
+      openrazer-daemon
+      razergenie
+      spotify-tui
+      nixfmt
+      nixd
+      p7zip
+      btop
+      appimage-run
+      pango
+      gdk-pixbuf
+      kitty
     ];
   };
 
@@ -189,6 +199,14 @@
   ];
 
   programs.steam.enable = true;
+
+  # Virtual Box
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.x11 = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
