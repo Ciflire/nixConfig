@@ -2,10 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, fetchurl, ... }:
+{ config, pkgs, fetchurl, inputs, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
+    inputs.home-manager.nixosModules.default
     ./hardware-configuration.nix
     ./nvidia.nix
     ./zsh.nix
@@ -59,8 +60,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "fr";
-    xkbVariant = "";
+    xkb.layout = "fr";
+    xkb.variant = "";
   };
 
   services.asusd.enable = true;
@@ -178,13 +179,22 @@
       spotify-tui
       nixfmt
       nixd
+      nil
       p7zip
       btop
       appimage-run
       pango
       gdk-pixbuf
       kitty
+      yuzu
+      unrar
     ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = { "ciflire" = import ./home.nix; };
+
   };
 
   # Allow unfree packages
