@@ -3,11 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # kde2nix.url = "github:nix-community/kde2nix";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -19,8 +20,10 @@
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
+          # kde2nix.nixosModules.plasma6
           ./hosts/default/configuration.nix
-          inputs.home-manager.nixosModules.default
+          # inputs.home-manager.nixosModules.default
+          # ({ services.xserver.desktopManager.plasma6.enable = true; })
         ];
       };
 

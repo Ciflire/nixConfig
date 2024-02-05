@@ -6,10 +6,10 @@
 
 {
   imports = [ # Include the results of the hardware scan.
-    inputs.home-manager.nixosModules.default
+    # inputs.home-manager.nixosModules.default
     ./hardware-configuration.nix
-    ./nvidia.nix
-    ./zsh.nix
+    ../../modules/nixos/nvidia.nix
+    ../../modules/home-manager/zsh.nix
   ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -55,7 +55,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
   programs.sway.enable = true;
 
   # Configure keymap in X11
@@ -106,7 +106,7 @@
   };
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
-  fonts.packages = with pkgs; [ fira-code-nerdfont ];
+  fonts.packages = with pkgs; [ fira-code-nerdfont mononoki ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ciflire = {
     shell = pkgs.zsh;
@@ -189,12 +189,6 @@
       yuzu
       unrar
     ];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = { "ciflire" = import ./home.nix; };
-
   };
 
   # Allow unfree packages
