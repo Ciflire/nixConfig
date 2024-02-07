@@ -19,8 +19,9 @@
       vpn =
         "sudo openconnect -u vesse1u@etu --authgroup='Universite-de-Lorraine' vpn.univ-lorraine.fr";
       rnm = "sudo systemctl restart NetworkManager";
-      upgrade = "sudo nixos-rebuild switch --upgrade";
-      # update = "sudo nix flake update /home/ciflire/nixConfig";
+      upgrade =
+        "sudo nixos-rebuild switch --flake /home/ciflire/etc/nixos#default";
+      update = "sudo nix flake update /home/ciflire/etx/nixos#default";
       # wallpaper = "/home/ciflire/dotfiles/hypr/scripts/wallpaper.sh select";
       ls = "lsd -la";
       lr = "lsd -lR";
